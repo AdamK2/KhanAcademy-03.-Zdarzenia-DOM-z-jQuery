@@ -4,17 +4,15 @@ Temat zadania:
  Podpis powinien pokazywać, ile razy kliknięto ten obraz. 
  Użyj jQuery aby to zrealizować - dodaj dla tego obrazu nasłuchiwacz zdarzeń click, który będzie powiększać zmienną numClicks oraz aktualizować podpis. 
  
-Wykonanie: 
- Efekt jest poprawny ale prawdopodobnie kod zawiera błędy, bo edytor Khan Academy nie wyświetla, że zadanie wykonano dobrze.
- 
- */
- 
- var total = 1;
-    $("#crocs").on("click", function(index, numClicks) 
+
+    var numClicks = 0;
+    
+    $("#crocs").on("click", function(index) 
     
     {
-    var numClicks =  total ++;
-    $("#results").text("You clicked " + numClicks + " times");
+        numClicks++;
+        $("#results").text("You clicked " + numClicks + " times");
     
-    });	
-	
+    });
+    
+   
